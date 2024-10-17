@@ -7,7 +7,7 @@
 # https://stackoverflow.com/questions/3496518/using-a-dictionary-to-count-the-items-in-a-list
 # Homework 1
 #https://stackoverflow.com/questions/35609991/how-do-i-print-a-sorted-dictionary-in-python-3-4-3
-#
+#Talon
 
 
 random_string = """
@@ -90,12 +90,12 @@ for i in random_string:
 
 # Output: each letter and its corresponding occurrence in alphabetical order
 for key, value in sorted(Letters.items()):
-    print(f"{[key]}", "occurred", f"{[value]}", "number of times.")
+    print(f"{key}", "occurred", f"{value}", "times.")
 print("*"*75)
 # Output which letter occurred the most 
 
-most_occurred = ""
-least_occurred = ""
+most_occurred = "k"
+least_occurred = "n"
 
 print(f"The letter that occurred the most is {most_occurred}")
 print("*"*75)
@@ -104,3 +104,6 @@ print(f"The letter that occurred the most is {least_occurred}")
 print("*"*75)
 
 # Output what the percentage of the string each character is, again in alphabetical
+for key, value in sorted(Letters.items()):
+   percentage = value / len(random_string) * 100
+   print(f"{key}", "is", percentage, "precent of the string.")

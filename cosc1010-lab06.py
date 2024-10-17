@@ -1,12 +1,13 @@
-# Your Name Here
+# Donovan Appelhans
 # UWYO COSC 1010
-# Submission Date
+# 10/17/2024
 # Lab 06
-# Lab Section: 
+# Lab Section: 12
 # Sources, people worked with, help given to: 
-# your
-# comments
-# here
+# https://stackoverflow.com/questions/3496518/using-a-dictionary-to-count-the-items-in-a-list
+# Homework 1
+#https://stackoverflow.com/questions/35609991/how-do-i-print-a-sorted-dictionary-in-python-3-4-3
+#
 
 
 random_string = """
@@ -82,9 +83,14 @@ print(len(random_string)) # Print out the size for reference
 
 #Load all the elements into a dictionary
 #Will need to first declare a dictionary 
+Letters = dict()
+for i in random_string:
+  Letters[i] = Letters.get(i, 0) + 1
+    
 
 # Output: each letter and its corresponding occurrence in alphabetical order
-
+for key, value in sorted(Letters.items()):
+    print(f"{[key]}", "occurred", f"{[value]}", "number of times.")
 print("*"*75)
 # Output which letter occurred the most 
 
